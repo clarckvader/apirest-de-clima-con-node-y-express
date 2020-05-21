@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sueldo</th>
+            <th>Fecha de nacimiento</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each persons}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>{{mayusculas (prefijo apellido)}}</td>
+            <td>{{redondeo sueldo}}</td>
+            <td>{{fecha fecha_nacimiento}}</td>
+            <td>{{edad fecha_nacimiento}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

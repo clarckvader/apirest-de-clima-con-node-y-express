@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handlebars en express</title>
+    <link rel="stylesheet" href="/bs/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        {{> navbar}}
+        <div class="row">
+            
+                <form action="mostrar" method="GET">
+                    <div class="col-12 form-group">
+                    <input type="text" id="ciudad" name="ciudad" class="form-control">
+                    </div>
+                    <div class="col-12 form-group">
+                    <button type="submit" class="btn-info"> Consultar</button>
+                    </div>                
+                </form>
+            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h1>Lista de personas</h1>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+              {{>personas}}
+            </div>
+
+        </div>    
+    </div>
+</body>
+</html>
